@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTRL+PLAY - Sistema de Agendamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://i.imgur.com/SxQo3Lf.png" type="image/png">
+</head>
+<body>
+    <div class="landing-container fade-in">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <img src="https://i.imgur.com/SxQo3Lf.png" alt="CTRL+PLAY Logo" class="hero-logo">
+            <h1 class="hero-title">Sistema de Agendamento</h1>
+            <p class="hero-subtitle">Tecnologia e inovação para gerenciar suas aulas experimentais</p>
+        </div>
+        
+        <!-- Navigation Grid -->
+        <div class="button-grid">
+            <div class="nav-card" onclick="navigateTo('Agendamento')">
+                <div class="nav-card-icon">🚀</div>
+                <h3 class="nav-card-title">Agendar Aula Experimental</h3>
+                <p class="nav-card-description">Crie novos agendamentos de forma rápida e intuitiva</p>
+            </div>
+            
+            <div class="nav-card" onclick="navigateTo('Admin')">
+                <div class="nav-card-icon">⚙️</div>
+                <h3 class="nav-card-title">Painel de Administração</h3>
+                <p class="nav-card-description">Configure horários de trabalho e exceções</p>
+            </div>
+            
+            <div class="nav-card" onclick="navigateTo('ListagemAulas')">
+                <div class="nav-card-icon">📅</div>
+                <h3 class="nav-card-title">Listar Aulas Agendadas</h3>
+                <p class="nav-card-description">Visualize os agendamentos por dia em formato de grade</p>
+            </div>
+            
+            <div class="nav-card" onclick="navigateTo('GerenciamentoAulas')">
+                <div class="nav-card-icon">📊</div>
+                <h3 class="nav-card-title">Gerenciar Agendamentos</h3>
+                <p class="nav-card-description">Gerencie status e acompanhe o histórico completo</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Sistema CTRL+PLAY - Versão GitHub Pages</p>
+            <p class="footer-small">Configure a URL do sistema no arquivo <code>config.js</code></p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

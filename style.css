@@ -1,0 +1,297 @@
+/* ===== SISTEMA DE CORES CTRL+PLAY ===== */
+:root {
+  /* Cores Primárias da Marca */
+  --ctrl-teal-50: #E6F3F7;
+  --ctrl-teal-100: #B3DDE7;
+  --ctrl-teal-200: #80C7D7;
+  --ctrl-teal-300: #4DB1C7;
+  --ctrl-teal-400: #3A9BB1;
+  --ctrl-teal-500: #2B7A8B;
+  --ctrl-teal-600: #266E7D;
+  --ctrl-teal-700: #1E5B6A;
+  --ctrl-teal-800: #164856;
+  --ctrl-teal-900: #0F2D36;
+
+  --ctrl-orange-50: #FFF3E0;
+  --ctrl-orange-100: #FFE0B2;
+  --ctrl-orange-200: #FFCC80;
+  --ctrl-orange-300: #FFB74D;
+  --ctrl-orange-400: #FFA726;
+  --ctrl-orange-500: #F57C00;
+  --ctrl-orange-600: #EF6C00;
+  --ctrl-orange-700: #E65100;
+  --ctrl-orange-800: #D84315;
+  --ctrl-orange-900: #BF360C;
+
+  --ctrl-gray-50: #FAFAFA;
+  --ctrl-gray-100: #F5F5F5;
+  --ctrl-gray-200: #EEEEEE;
+  --ctrl-gray-300: #E0E0E0;
+  --ctrl-gray-400: #BDBDBD;
+  --ctrl-gray-500: #9E9E9E;
+  --ctrl-gray-600: #757575;
+  --ctrl-gray-700: #2D2D2D;
+  --ctrl-gray-800: #212121;
+  --ctrl-gray-900: #1A1A1A;
+
+  /* Cores Semânticas */
+  --success: #10B981;
+  --error: var(--ctrl-orange-600);
+  --warning: #F59E0B;
+  --info: var(--ctrl-teal-500);
+
+  /* Sombras Otimizadas */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  /* Espaçamento */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+
+  /* Bordas */
+  --border-radius-sm: 0.375rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-radius-2xl: 1.5rem;
+}
+
+/* ===== RESET E ESTILOS GLOBAIS ===== */
+* {
+  box-sizing: border-box;
+  will-change: auto;
+}
+
+/* ===== OTIMIZAÇÕES DE PERFORMANCE ===== */
+.nav-card {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, var(--ctrl-teal-50) 0%, var(--ctrl-gray-50) 100%);
+  color: var(--ctrl-gray-800);
+  margin: 0;
+  padding: var(--spacing-5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== LANDING PAGE MODERNA ===== */
+.landing-container {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: var(--border-radius-2xl);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  margin-top: var(--spacing-16);
+}
+
+.hero-section {
+  background: linear-gradient(135deg, var(--ctrl-teal-500) 0%, var(--ctrl-teal-700) 100%);
+  color: white;
+  padding: var(--spacing-16) var(--spacing-8);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 100%
+  );
+  animation: none;
+}
+
+.hero-logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: var(--spacing-6);
+  filter: brightness(0) invert(1);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-4);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: var(--spacing-8);
+  position: relative;
+  z-index: 1;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-6);
+  padding: var(--spacing-8);
+}
+
+.nav-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-6);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(43, 122, 139, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.nav-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--ctrl-teal-200);
+  transform: translateY(-2px);
+}
+
+.nav-card:hover::before {
+  left: 100%;
+}
+
+.nav-card-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-4);
+  color: var(--ctrl-teal-500);
+}
+
+.nav-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ctrl-gray-800);
+  margin-bottom: var(--spacing-2);
+  margin-top: 0;
+}
+
+.nav-card-description {
+  color: var(--ctrl-gray-600);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--ctrl-gray-50);
+  padding: var(--spacing-6);
+  text-align: center;
+  border-top: 1px solid var(--ctrl-gray-200);
+  color: var(--ctrl-gray-600);
+}
+
+.footer p {
+  margin: 0 0 var(--spacing-2) 0;
+  font-size: 0.9rem;
+}
+
+.footer-small {
+  font-size: 0.8rem !important;
+  opacity: 0.8;
+}
+
+.footer code {
+  background: var(--ctrl-gray-200);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--border-radius-sm);
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: var(--ctrl-teal-700);
+}
+
+/* ===== ANIMAÇÕES E TRANSIÇÕES ===== */
+.fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  body {
+    padding: var(--spacing-3);
+  }
+
+  .landing-container {
+    margin-top: var(--spacing-12);
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .button-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+    padding: var(--spacing-6);
+  }
+
+  .nav-card {
+    padding: var(--spacing-5);
+  }
+
+  .nav-card-icon {
+    font-size: 2.5rem;
+  }
+
+  .nav-card-title {
+    font-size: 1.1rem;
+  }
+
+  .nav-card-description {
+    font-size: 0.85rem;
+  }
+}
