@@ -27,6 +27,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /**
+ * Navegação para página inicial
+ * Clique no logo redireciona para index.html
+ */
+function navigateToHome() {
+    console.log('🏠 Navegando para página inicial');
+    window.location.href = 'index.html';
+}
+
+/**
  * Função principal de navegação
  * Redireciona para páginas mascaradas do GitHub Pages
  * 
