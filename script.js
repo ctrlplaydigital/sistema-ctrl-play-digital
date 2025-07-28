@@ -47,7 +47,8 @@ function navigateTo(page) {
         'Agendamento': 'agendamento.html',
         'Admin': 'admin.html',
         'ListagemAulas': 'listagem.html',
-        'GerenciamentoAulas': 'gerenciamento.html'
+        'GerenciamentoAulas': 'gerenciamento.html',
+        'Dashboard': 'dashboard.html'
     };
 
     // Verifica se a página existe no mapeamento

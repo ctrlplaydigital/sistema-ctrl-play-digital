@@ -13,7 +13,7 @@
  */
 
 // 👇 ALTERE APENAS ESTA LINHA COM A URL DO SEU SISTEMA
-const SISTEMA_URL = 'https://script.google.com/macros/s/AKfycbziQDm0n4pFq1A9krGlSePGxurzw7nEIkFdwGH-bW2mkQURxa_ZXOJgaqehbX7FTb17ww/exec';
+const SISTEMA_URL = 'https://script.google.com/macros/s/AKfycbzRYzUDjRN8ciJLx1zaQGGknJqVo4iv5Bz46YZfh7xmWfdVTSdVyta_bynB7nJxaoyFBw/exec';
 
 // ✅ Não modificar as linhas abaixo
 window.SISTEMA_CONFIG = {
